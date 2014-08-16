@@ -15,7 +15,7 @@ RSpec.describe "map_locations/edit", :type => :view do
 
       assert_select "input#map_location_name[name=?]", "map_location[name]"
 
-      assert_select "input#map_location_road_info[name=?]", "map_location[road_info]"
+      assert_select "textarea#map_location_road_info[name=?]", "map_location[road_info]"
     end
   end
 end
