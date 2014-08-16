@@ -24,11 +24,12 @@ RSpec.describe MapLocationsController, :type => :controller do
   # MapLocation. As you add validations to MapLocation, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {name: "region",
+    road_info: "A B 10, B C 15"}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {name: "", road_info: ""}
   }
 
   # This should return the minimal set of values that should be in the session
