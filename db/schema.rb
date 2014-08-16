@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140816110242) do
+ActiveRecord::Schema.define(version: 20140816122145) do
 
   create_table "map_locations", force: true do |t|
     t.string   "name"
-    t.string   "road_info"
+    t.text     "road_info",  limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
