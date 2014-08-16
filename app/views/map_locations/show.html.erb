@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @map_location.name %>
+</p>
+
+<p>
+  <strong>Road info:</strong>
+  <%= @map_location.road_info %>
+</p>
+
+<%= link_to 'Edit', edit_map_location_path(@map_location) %> |
+<%= link_to 'Back', map_locations_path %>

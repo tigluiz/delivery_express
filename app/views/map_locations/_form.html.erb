@@ -1,0 +1,25 @@
+<%= form_for(@map_location) do |f| %>
+  <% if @map_location.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@map_location.errors.count, "error") %> prohibited this map_location from being saved:</h2>
+
+      <ul>
+      <% @map_location.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :road_info %><br>
+    <%= f.text_field :road_info %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
