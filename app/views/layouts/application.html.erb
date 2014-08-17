@@ -6,16 +6,16 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
+    <header class="page-header">
       <div class="navbar-inner">
         <div class="container">
-          <%= link_to "Distribuidora", root_path, id: "logo" %>
-          <nav>
-            <ul class="nav pull-right">
+          <h1>
+            <%= link_to "Distribuidora", root_path, id: "logo" %>
+          </h1>
+            <ul class="nav nav-tabs pull-right">
               <li><%= link_to "Criar mapa", map_locations_path %></li>
               <li><%= link_to "Melhor caminho", roads_path %></li>
             </ul>
-          </nav>
         </div>
       </div>
     </header>

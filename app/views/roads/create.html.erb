@@ -1,13 +1,22 @@
 <h1><%= @map.name%></h1>
-<br />
-<p>Informações sobre o melhor caminho</p>
-<br />
-<p>Caminho</p>
-<%= @road_info[:road] %>
-<br />
-<p>Custo</p>
-<%= @road_info[:cost].to_s %>
 
-<br />
-<br />
-<%= link_to "Nova consulta", roads_path %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <strong>Caminho:</strong>
+  </div>
+  <div class="panel-body">
+    <%= @road_info[:road] %>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <strong>Custo:</strong>
+  </div>
+  <div class="panel-body">
+    <%= @road_info[:cost] %>
+  </div>
+</div>
+
+<ul class="nav nav-pills">
+  <li><%= link_to "Nova consulta", roads_path %></li>
+</ul

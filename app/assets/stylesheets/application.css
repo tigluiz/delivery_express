@@ -14,4 +14,10 @@
  *= require bootstrap.min
  *= require_self
  */
-body { padding-top: 100px; };
+.page-header{
+  background-color: aliceblue;
+  margin: 0px 0 20px;
+}
+#road_form{
+  width: 530px;
+}
