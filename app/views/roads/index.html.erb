@@ -2,6 +2,6 @@
 <br />
 <% @maps.all.each do |map| %>
   <%= map.name %>
-  <%= link_to("Utilizar", road_path(map)) %>
+  <%= link_to("Utilizar", road_path(map), id: map.id) %>
 <% end %>
 

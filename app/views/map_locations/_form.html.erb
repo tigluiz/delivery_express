@@ -1,27 +1,33 @@
-<%= form_for(@map_location) do |f| %>
-  <% if @map_location.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@map_location.errors.count, "error") %> prohibited this map_location from being saved:</h2>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    Crie seu mapa
+  </div>
+  <div class="panel-body">
+    <%= form_for @map_location , :html => {:class => "form-horizontal"} do |f| %>
+      <% if @map_location.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@map_location.errors.count, "error") %> prohibited this map_location from being saved:</h2>
 
-      <ul>
-      <% @map_location.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% @map_location.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+      <div class="field">
+        <%= f.label :name, :class => "required control-label" %><br>
+        <%= f.text_field :name, :class => "string required form-control" %>
+      </div>
+      <div class="field">
+        <small>Adicionar as rotas sepaaradas por virgula. ex: A B 10, B D 15</small>
+        </br>
+        <%= f.label :road_info %><br>
+        <%= f.text_area :road_info, :class => "text required form-control" %>
+      </div>
+      <div class="actions">
+        <%= f.submit  "Salvar", :class => "btn btn-default" %>
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <small>Adicionar as rotas sepaaradas por virgula. ex: A B 10, B D 15</small>
-    </br>
-    <%= f.label :road_info %><br>
-    <%= f.text_area :road_info %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
