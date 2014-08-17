@@ -4,7 +4,7 @@ class RoadCalculator
   end
 
   def apply
-    raise "must be array" unless @roads.is_a?(Array)
+    raise "Must receive map location array" unless @roads.is_a?(Array)
   end
 
 end
