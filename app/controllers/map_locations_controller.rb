@@ -32,7 +32,7 @@ class MapLocationsController < ApplicationController
   def update
     respond_to do |format|
       if @map_location.update(map_location_params)
-        format.html { redirect_to @map_location, notice: 'Map location was successfully updated.' }
+        format.html { redirect_to @map_location, notice: 'Seu mapa foi atualizado.' }
         format.json { render :show, status: :ok, location: @map_location }
       else
         format.html { render :edit }
@@ -44,7 +44,7 @@ class MapLocationsController < ApplicationController
   def destroy
     @map_location.destroy
     respond_to do |format|
-      format.html { redirect_to map_locations_url, notice: 'Map location was successfully destroyed.' }
+      format.html { redirect_to map_locations_url, notice: 'Seu mapa foi apagado.' }
       format.json { head :no_content }
     end
   end
