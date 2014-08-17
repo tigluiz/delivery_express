@@ -1,0 +1,25 @@
+<h1>Escolha sua origem e destino</h1>
+
+<br />
+<h2><%= @map.name %></h2>
+<br />
+<%= form_tag(roads_path) do%>
+  <%= hidden_field_tag "id" , @map.id %>
+  <%= label_tag "Ponto inicial" %>
+  <%= text_field_tag "origin" %>
+
+  <br />
+  <%= label_tag "Ponto final" %>
+  <%= text_field_tag "destiny" %>
+
+  <br />
+  <%= label_tag "Autonomia" %>
+  <%= text_field_tag "autonomy" %>
+
+  <br />
+  <%= label_tag "Valor do combustivel" %>
+  <%= text_field_tag "gas_value" %>
+
+  <br />
+  <%= submit_tag "Enviar" %>
+<% end %>

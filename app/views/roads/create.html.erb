@@ -1,2 +1,13 @@
-<h1>Roads#create</h1>
-<p>Find me in app/views/roads/create.html.erb</p>
+<h1><%= @map.name%></h1>
+<br />
+<p>Informações sobre o melhor caminho</p>
+<br />
+<p>Caminho</p>
+<%= @road_info[:road] %>
+<br />
+<p>Custo</p>
+<%= @road_info[:cost].to_s %>
+
+<br />
+<br />
+<%= link_to "Nova consulta", roads_path %>

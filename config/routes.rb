@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'roads/index'
+  # get 'roads/index'
 
-  get 'roads/create'
+  # post 'roads/create'
 
+
+  resources :roads
   resources :map_locations
 
   root 'home#index'

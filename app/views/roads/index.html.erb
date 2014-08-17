@@ -1,2 +1,7 @@
-<h1>Roads#index</h1>
-<p>Find me in app/views/roads/index.html.erb</p>
+<h1>Escolha seu mapa</h1>
+<br />
+<% @maps.all.each do |map| %>
+  <%= map.name %>
+  <%= link_to("Utilizar", road_path(map)) %>
+<% end %>
+
