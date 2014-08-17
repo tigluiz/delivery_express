@@ -27,6 +27,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.2'
   gem 'better_errors'
   gem 'shoulda-matchers'
+  gem "pry"
+  gem "pry-nav"
 end
 
 group :test do
