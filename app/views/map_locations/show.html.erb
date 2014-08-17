@@ -1,14 +1,22 @@
 <p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <strong>Nome:</strong>
+  </div>
+  <div class="panel-body">
+    <%= @map_location.name %>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <strong>Rota:</strong>
+  </div>
+  <div class="panel-body">
+    <%= @map_location.road_info %>
+  </div>
+</div>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @map_location.name %>
-</p>
-
-<p>
-  <strong>Rota:</strong>
-  <%= @map_location.road_info %>
-</p>
-
-<%= link_to 'Editar', edit_map_location_path(@map_location) %> |
-<%= link_to 'Voltar', map_locations_path %>
+<ul class="nav nav-pills">
+  <li><%= link_to 'Editar', edit_map_location_path(@map_location) %></li>
+  <li><%= link_to 'Voltar', map_locations_path %></li>
+</ul
