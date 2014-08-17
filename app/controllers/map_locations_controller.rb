@@ -28,7 +28,7 @@ class MapLocationsController < ApplicationController
 
     respond_to do |format|
       if @map_location.save
-        format.html { redirect_to @map_location, notice: 'Map location was successfully created.' }
+        format.html { redirect_to @map_location, notice: 'Seu mapa foi criado com sucesso.' }
         format.json { render :show, status: :created, location: @map_location }
       else
         format.html { render :new }
