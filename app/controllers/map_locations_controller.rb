@@ -1,28 +1,20 @@
 class MapLocationsController < ApplicationController
   before_action :set_map_location, only: [:show, :edit, :update, :destroy]
 
-  # GET /map_locations
-  # GET /map_locations.json
   def index
     @map_locations = MapLocation.all
   end
 
-  # GET /map_locations/1
-  # GET /map_locations/1.json
   def show
   end
 
-  # GET /map_locations/new
   def new
     @map_location = MapLocation.new
   end
 
-  # GET /map_locations/1/edit
   def edit
   end
 
-  # POST /map_locations
-  # POST /map_locations.json
   def create
     @map_location = MapLocation.new(map_location_params)
 
@@ -37,8 +29,6 @@ class MapLocationsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /map_locations/1
-  # PATCH/PUT /map_locations/1.json
   def update
     respond_to do |format|
       if @map_location.update(map_location_params)
@@ -51,8 +41,6 @@ class MapLocationsController < ApplicationController
     end
   end
 
-  # DELETE /map_locations/1
-  # DELETE /map_locations/1.json
   def destroy
     @map_location.destroy
     respond_to do |format|
@@ -62,12 +50,10 @@ class MapLocationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_map_location
       @map_location = MapLocation.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def map_location_params
       params.require(:map_location).permit(:name, :road_info)
     end
